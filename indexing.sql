@@ -24,18 +24,7 @@ WHERE year = 2010;
 -- 71.479 MS
 
 -----------------------------------------------------------
-CREATE INDEX sorted_make_code
-on car_models (make_code);
--- 223.495 MS
 
-CREATE INDEX make_model_code
-on car_models (make_code, model_code);
--- 376.745 MS
-
-CREATE INDEX sorted_year
-on car_models (year);
--- 147.060 MS
-------------------------------------------------------------
 SELECT DISTINCT make_title
 FROM car_models
 WHERE make_code = 'LAM';
